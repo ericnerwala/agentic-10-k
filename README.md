@@ -6,7 +6,7 @@ Unlike deterministic rule-based approaches, this system uses an LLM agent in a *
 
 ## Results
 
-**391 filings | DeepSeek-V3.2 | $0.045/filing | Zero crashes**
+**391 filings | DeepSeek-V3.2 | $0.045/filing**
 
 | Metric | Value |
 |--------|-------|
@@ -34,15 +34,6 @@ Unlike deterministic rule-based approaches, this system uses an LLM agent in a *
 ![Cost and Latency](experiments/figures/03_cost_latency_efficiency.png)
 
 **(A)** Tokens per filing -- right-skewed, median 118K. **(B)** Latency -- median 113s. **(C)** Agent turns vs F1 -- failures concentrate at 25-30 turns (agent spiraling on hard filings).
-
-### Comparison with Rule-Based Pipeline
-
-| Metric | Rule-Based | Agentic |
-|--------|-----------|---------|
-| Adjusted DR | 84.4% (331/392) | 73.9% (289/391) |
-| Mean F1 | 97.6% | 96.6% |
-| Cost | $0 (deterministic) | $17.59 ($0.045/filing) |
-| Latency | <1s | 113s (median) |
 
 ## Architecture
 
