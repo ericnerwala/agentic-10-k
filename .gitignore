@@ -1,0 +1,24 @@
+# Data (large, not ours to distribute)
+data/
+data
+
+# Environment
+.env
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# LaTeX build artifacts
+docs/*.aux
+docs/*.log
+docs/*.out
+docs/*.toc
+docs/*.fls
+docs/*.fdb_latexmk
+docs/*.synctex.gz
+
+# Symlinks (recreate locally)
+shootout

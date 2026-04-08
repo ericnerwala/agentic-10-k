@@ -1,0 +1,85 @@
+%----------------------------------------
+% Page style
+
+\addtolength{\hoffset}{-0.75in} \addtolength{\voffset}{-0.75in}
+\setlength{\textwidth}{7in} \setlength{\textheight}{8.25in}
+\setlength{\headheight}{0.6in}
+\setlength{\headsep}{0.2in}
+\setlength{\footskip}{40pt}
+\setlength{\fboxsep}{12pt}
+\setlength{\parskip}{3pt}
+
+\usepackage{lastpage}
+\usepackage{ragged2e}
+
+%----------------------------------------
+% Title style
+
+\newcommand{\makeCustomTitle}
+{
+\begin{center}
+\LARGE{\textbf{\reportTitle{}}}
+\\
+\vspace{5pt}
+\normalsize{\reportAuthors{}}
+\\
+\reportDate{}
+\end{center}
+\begin{flushright}
+\footnotesize{
+\begin{tabu}{ccX}
+\toprule
+\emph{Version} & \emph{Date} & \emph{Comments} \\
+\midrule
+\reportVersions{} \\
+\bottomrule
+\end{tabu}
+}
+\end{flushright}
+}
+
+%----------------------------------------
+% Section style
+\usepackage{sectsty}
+\allsectionsfont{\textsf\bfseries}
+
+%----------------------------------------
+% Caption style
+\usepackage[font=small, labelfont=bf, skip=5pt]{caption}
+
+%----------------------------------------
+% Header/footer style
+\usepackage{fancyhdr}
+
+\fancypagestyle{titlePage}{%
+\fancyhf{}%
+\fancyhead[C]{\raisebox{0.2in}{\textsc{Technical Report}}}
+\fancyfoot[C]{\thepage/\pageref*{LastPage}}
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\footrulewidth}{0.2pt}
+}
+
+\fancypagestyle{plain}{%
+\fancyhf{}
+\fancyhead[L]{\small\reportTitle{}}
+\fancyfoot[C]{\thepage/\pageref*{LastPage}}
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\footrulewidth}{0.1pt}
+}
+
+\pagestyle{plain}
+
+%----------------------------------------
+% Footnote style (fnpos not available; skip)
+
+% ---------------------------------------------------------------
+% PDF setup
+\hypersetup{%
+    pdftitle={\reportTitle},
+    pdfkeywords={10-K, SEC, extraction, NLP, F1 score},
+    pdfsubject={Technical Report on 10-K Item Extraction},
+    pdfstartview={},
+    urlcolor=black,
+    linkcolor=black,
+    citecolor=black,
+}%

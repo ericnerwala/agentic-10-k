@@ -1,0 +1,8 @@
+{
+  "name": "Baseline (100 Filings)",
+  "model": "deepseek/deepseek-v3.2",
+  "filings": 100,
+  "max_turns": 30,
+  "changes": "None - original pipeline",
+  "date": "2026-04-06"
+}

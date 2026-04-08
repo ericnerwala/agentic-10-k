@@ -1,0 +1,71 @@
+\vfuzz2pt
+\hfuzz2pt
+
+% Bibliography
+\usepackage[backend=bibtex, style=ieee, sorting=none, natbib=true,
+    doi=false, isbn=false, url=false, eprint=false,
+    maxcitenames=1, mincitenames=1]{biblatex}
+
+% Cross-referencing (black and white only)
+\usepackage[pdftex,colorlinks=false,pdfborder={0 0 0}]{hyperref}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Section}
+\def\subsubsectionautorefname{Section}
+\usepackage[english,noabbrev,nameinlink]{cleveref}
+
+% SI units
+\usepackage{siunitx}
+\sisetup{group-separator = \text{\,}}
+
+% Text utilities
+\usepackage[all]{nowidow}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\newcommand{\lightlipsum}[1][0]{\textcolor{gray!50}{\lipsum[#1]}}
+\usepackage{xspace}
+\newcommand{\ie}{i.e.,\xspace{}}
+\newcommand{\eg}{e.g.,\xspace{}}
+
+% Figures
+\usepackage[pdftex]{graphicx}
+\graphicspath{{./}}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow, multicol}
+\usepackage{tabu}
+
+% Math
+\usepackage{amssymb,amsfonts,amsmath,amscd}
+\usepackage{bm}
+
+% Code listings (black and white)
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{white},
+  frame=single,
+  rulecolor=\color{black},
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+  xleftmargin=4pt,
+  xrightmargin=4pt,
+  aboveskip=8pt,
+  belowskip=8pt,
+}
+
+% Black-and-white boxes
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+\newtcolorbox{resultbox}{
+  colback=white,
+  colframe=black,
+  fonttitle=\bfseries,
+  breakable,
+  boxrule=0.8pt,
+  arc=0pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt,
+}

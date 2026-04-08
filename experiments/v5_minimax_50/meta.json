@@ -1,0 +1,12 @@
+{
+  "name": "minimax-m2.7 + Heading Scan + Checkpoint",
+  "model": "minimax/minimax-m2.7",
+  "filings": 50,
+  "max_turns": 30,
+  "changes": [
+    "Model swap: deepseek-v3.2 -> minimax-m2.7",
+    "Added heading scan in index builder (_scan_heading_candidates)",
+    "Added best-so-far checkpoint in agent loop"
+  ],
+  "date": "2026-04-08"
+}
